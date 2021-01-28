@@ -1,0 +1,14 @@
+body {
+  background-color:greenyellow;
+}
+h1{
+  color:red;
+}
+
+a:visited, a:link{
+  color:blue;
+}
+
+a:hover {
+  color: red
+}
