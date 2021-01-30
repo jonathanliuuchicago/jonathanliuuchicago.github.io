@@ -1,8 +1,8 @@
 body {
-  background-color:greenyellow;
+  background-color: grey;
 }
 h1{
-  color:red;
+  color: black;
 }
 
 a:visited, a:link{
@@ -10,5 +10,9 @@ a:visited, a:link{
 }
 
 a:hover {
+  color: red;
+}
+
+.topnav {
   color: red
 }
