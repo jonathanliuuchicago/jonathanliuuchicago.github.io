@@ -7,8 +7,12 @@ h1{
   color: black;
 }
 
-a:visited, a:link{
+a:link{
   color:blue;
+}
+
+a:visited{
+  color:purple;
 }
 
 a:hover {
