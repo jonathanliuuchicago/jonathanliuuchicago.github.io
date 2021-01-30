@@ -1,5 +1,6 @@
 body {
-  background-color: grey;
+  background-color: wheat;
+  padding-top: 50px;
 }
 
 h1{
@@ -12,4 +13,22 @@ a:visited, a:link{
 
 a:hover {
   color: red;
+}
+
+.topnav {
+  position: fixed;
+  left: 0;     
+  top: 0;    
+  width: 100%;
+  background-color: yellow;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: green;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
