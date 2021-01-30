@@ -40,3 +40,7 @@ a:hover {
 .active-page{
   background-color:aqua;
 }
+
+img {
+  width: 100%;
+}
