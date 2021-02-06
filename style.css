@@ -45,12 +45,20 @@ img {
   width: 100%;
 }
 
-.time{
+#time{
   background-color: green;
   color: orange;
+  font-weight: bold;
 }
 
-.minute{
+#minute{
   background-color: blue;
   color: red;
+  font-weight: bold;
+}
+
+#hide{
+  background-color: oldlace;
+  color: burlywood;
+  font-weight: bold;
 }
