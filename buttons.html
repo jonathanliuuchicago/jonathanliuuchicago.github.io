@@ -8,25 +8,27 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
 
-    <title>Jonathan Liu's Website</title>
+    <title>Testing JavaScript</title>
   </head>
   <body>
     <div class="container-fluid">
       <div class="topnav">
-        <a href="index.html" class="active-page">Home</a>
+        <a href="index.html">Home</a>
         <a href="contact.html">Contact</a>
         <a href="about.html">About Me</a>
         <a href="research.html">Research</a>
-        <a href="buttons.html">Button Testing</a>
+        <a href="buttons.html" class = "active-page">Button Testing</a>
       </div>
       <br>
-      <h1>Jonathan Liu</h1>
-      <h3>Fourth-Year Economics Major at the University of Chicago</h3>
-      <h6 class="d-none d-md-block">"Be the best version of yourself in anything you do. You don’t have to live anybody else’s story."
-         - Stephen Curry</h6>
-    </div>
-    <img src="profile_pic.JPG" style="width:450px;height:540px;">
-  </body>
+      <h1>A Few JavaScript Functions</h1>
+      <div>
+        <button onclick = "displayTime()">Show Current Time</button>
+        <div id = "time"></div>
+        <button onclick = "displayMinutes()">Show Minutes</button>
+        <div id = "minutes"></div>
 
-  
+
+    </div>
+  </body>
