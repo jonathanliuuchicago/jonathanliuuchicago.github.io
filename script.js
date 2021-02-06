@@ -7,3 +7,7 @@ function displayTime() {
 function displayMinutes() {
     document.getElementById("minutes").innerHTML = today.getMinutes();
 }
+
+function hideVideo() {
+    document.getElementById("video").style.visibility = "hidden";
+}

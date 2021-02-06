@@ -44,3 +44,13 @@ a:hover {
 img {
   width: 100%;
 }
+
+.time{
+  background-color: green;
+  color: orange;
+}
+
+.minute{
+  background-color: blue;
+  color: red;
+}
