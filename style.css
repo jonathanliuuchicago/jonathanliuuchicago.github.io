@@ -72,3 +72,8 @@ img {
   background-color: red;
   text-align: center;
 }
+
+iframe{
+  height: 50vh;
+  width: 55vh;
+}
