@@ -8,9 +8,10 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <script src="script.js"></script>
 
-    <title>A Few Buttons</title>
+    <title>A Few Buttons and Other Miscellaneous Items</title>
   </head>
   <body>
     <div class="container-fluid">
@@ -20,11 +21,29 @@
         <a href="about.html">About Me</a>
         <a href="research.html">Research</a>
         <a href="buttons.html" class = "active-page">Button Testing</a>
+        <div class="dropdown">
+          <button class="dropbtn">APIs
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="wikiAPI.html">Wikipedia</a>
+            <a href="mapAPI.html">Map</a>
+          </div>
+        </div>
       </div>
       <br>
+      <div class="row">
+        <div class="column">Column 1</div>
+        <div class="column">Column 2</div>
+        <div class="column">Column 3</div>
+        <div class="column">Column 4</div>
+      </div>
+
       <h1>A Few JavaScript Functions</h1>
+
       <div>
-        <button id = "time" onclick = "displayTime()">Show Current Date and Time</button>
+        <button id = "time-popup" onclick = "displayTimePopup()">Pop Up Current Date and Time</button>
+        <button id = "time" onclick = "displayTime()">Show Current Date and Time Below</button>
         <div id = "time_text"></div>
         <button id = "minute" onclick = "displayMinutes()">Show Minutes</button>
         <div id = "minute_text"></div>
@@ -41,8 +60,49 @@
         </iframe>
         </div>
        </div>
-      </div>
-
       <button id = "hide" onclick = "hideVideo()">Hide Video</button>
     </div>
+    <br>
+    <br>
+
+    <div>
+      <h1>Sorting Words</h1>
+      <input placeholder="Enter Word" id="inputWord">
+      <button id="append" onclick = "append()">Add to List</button>
+      <button id="sort" onclick = "sortWords('words')">Sort Current List (Alphabetically)</button>
+      <button id="start-over" onclick = "location.reload()">Start Over</button>
+
+      <br>
+      <div>
+        <span>Current List: </span>
+        <span id="words"></span>
+      </div>
+
+      <div>
+        <span>Sorted List: </span>
+        <span id="sorted"></span>
+      </div>
+    </div>
+
+
+    <div>
+      <h1>Update Words</h1>
+      <input placeholder="Enter Word" id="newWord">
+      <button id="update" onclick = "update()">Update Word (Only If Longer)</button>
+      <button id="start-over" onclick = "location.reload()">Start Over</button>
+
+      <div>
+        <span>Current Word: </span>
+        <span id="long-word"></span>
+      </div>
+    </div>
+
+    <br>
+
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">Jonathan Liu</span>
+      </div>
+    </footer>
+
   </body>

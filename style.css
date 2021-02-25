@@ -25,7 +25,6 @@ a:hover {
   top: 0;    
   width: 100%;
   background-color: yellow;
-  overflow: hidden;
 }
 
 .topnav a {
@@ -71,4 +70,92 @@ img {
   color: white;
   background-color: red;
   text-align: center;
+}
+
+ul li {
+  display: inline;
+}
+
+#inLine {
+  display: inline-block;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  text-align:center;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 25%;
+}
+
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: yellow;
+  color: green;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  min-width: 100%;
+  text-align: left;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: greenyellow;
+}
+
+.column::first-letter {
+  font-size: 400%;
+  line-height: 100%;
+  float: left;
+  font-family: serif;
+  margin-right: 0.25em;
 }
