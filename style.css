@@ -27,6 +27,7 @@ a:hover {
   max-width: 100%;
   display: inline-block;
   background-color: yellow;
+  white-space: nowrap;
 }
 
 .topnav a {
