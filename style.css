@@ -20,23 +20,23 @@ a:hover {
 }
 
 .topnav {
-  position: fixed;
+  position: absolute;
   left: 0;     
   top: 0;    
   width: 100%;
-  max-width: 100%;
   display: inline-block;
   background-color: yellow;
+  overflow: hidden; 
   white-space: nowrap;
 }
 
 .topnav a {
   float: left;
   color: green;
-  text-align: center;
+  text-align: center;;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 14px;
 }
 
 .active-page{
@@ -105,12 +105,13 @@ footer {
   /* The width is the width of the web page */
 }
 
+/* Following the code from https://www.w3schools.com/css/css_dropdowns.asp */
 /* Dropdown Button */
 .dropbtn {
   background-color: yellow;
   color: green;
   padding: 14px;
-  font-size: 16px;
+  font-size: 14px;
   border: none;
 }
 
