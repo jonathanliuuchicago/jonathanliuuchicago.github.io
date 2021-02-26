@@ -30,6 +30,11 @@ a:hover {
   white-space: nowrap;
 }
 
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.topnav a:hover {
+  background-color: greenyellow;
+}
+
 .topnav a {
   float: left;
   color: green;
@@ -40,7 +45,7 @@ a:hover {
 }
 
 .active-page{
-  background-color:aqua;
+  background-color: greenyellow;
 }
 
 img {
