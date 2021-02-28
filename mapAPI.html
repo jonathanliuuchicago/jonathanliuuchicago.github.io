@@ -22,39 +22,46 @@
 </head>
 
 <body onload="mapLoad()">
-  <div class="container-fluid">
-    <div class="topnav">
-      <a href="index.html">Home</a>
-      <a href="contact.html">Contact</a>
-      <a href="about.html">About Me</a>
-      <a href="research.html">Research</a>
-      <a href="buttons.html">Button Testing</a>
-      <div class="dropdown">
-        <button class="dropbtn">APIs
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="wikiAPI.html">Wikipedia</a>
-          <a href="mapAPI.html">Map</a>
-          <a href="ochreAPI.html">Ochre</a>
+    <div class="container-fluid">
+      <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About Me</a>
+        <a href="research.html">Research</a>
+        <a href="buttons.html">Button Testing</a>
+        <div class="dropdown">
+          <button class="dropbtn">APIs
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="wikiAPI.html">Wikipedia</a>
+            <a href="mapAPI.html">Map</a>
+            <a href="ochreAPI.html">Ochre</a>
+          </div>
         </div>
       </div>
     </div>
+  <br>
+  <br>
+  <br>
+  <div class="container-fluid mt-3 d-none d-sm-block"> 
+    <h1>Map API</h1>
+    <div id="map"></div>
   </div>
-<br>
-<br>
-<br>
-<div class="container mt-3 d-none d-sm-block"> 
-  <h1>Map API</h1>
-  <div id="map"></div>
-</div>
 
+  <div class="container-fluid">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </div>
 
-<script src="script.js"></script>
+  <footer class="footer">
+    <div class="container">
+      <span class="text-muted">Jonathan Liu</span>
+    </div>
+  </footer>
 </body>
 
 </html>
