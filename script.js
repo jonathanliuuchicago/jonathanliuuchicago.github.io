@@ -2,7 +2,7 @@ var today = new Date();
 
 
 function displayTimePopup() {
-    window.alert(today)
+    window.alert(today);
 }
 
 function displayTime() {
@@ -13,7 +13,7 @@ function displayTime() {
     } else {
         document.getElementById("time").innerHTML = "Show Current Date and Time Below";
         document.getElementById("time_text").innerHTML= "";
-    }
+    };
 }
 
 function displayMinutes() {
@@ -24,7 +24,7 @@ function displayMinutes() {
     } else {
         document.getElementById("minute").innerHTML = "Show Minutes";
         document.getElementById("minute_text").innerHTML= "";
-    }
+    };
 }
 
 function hideVideo() {
@@ -35,7 +35,7 @@ function hideVideo() {
     } else {
         document.getElementById("video").style.visibility = "visible";
         document.getElementById("hide").innerHTML= "Hide Video";
-    }
+    };
 }
 
 function append() {
@@ -43,7 +43,7 @@ function append() {
     if (newWord==""){
         document.getElementById("inputWord").value = "";
         return;
-    }
+    };
     document.getElementById("words").innerHTML = document.getElementById("words").innerHTML + " " + newWord;
     document.getElementById("inputWord").value = "";
   }
@@ -59,6 +59,7 @@ function sortWords(textId) {
 
     var sortedArray = parseArray(wordArray);
     document.getElementById("sorted").innerHTML = sortedArray;
+    document.getElementById("last").innerHTML = sortedArray.slice(-1)[0];
   }
 
 function update() {
@@ -66,7 +67,7 @@ function update() {
     var currentWordLength = document.getElementById("long-word").innerHTML.length;
     if (newWord.length > currentWordLength){
         document.getElementById("long-word").innerHTML = newWord;
-    }
+    };
     document.getElementById("newWord").value = "";
   }
 
@@ -78,7 +79,6 @@ function wikiAPI(){
     connect.open('GET', url);
     connect.onload = function() {
         var wikiObject = JSON.parse(this.response);
-        console.log(wikiObject.query.pages)
         var pages = wikiObject.query.pages;
         for (var i in pages) {
             var pageLink = "https://en.wikipedia.org/?curid=" + pages[i].pageid;
@@ -89,7 +89,7 @@ function wikiAPI(){
             document.getElementById("wiki").appendChild(newElement);
             newElement.innerText = pages[i].title;
         };
-    }
+    };
     
     connect.send();
     document.getElementById("searchTerm").value = "";
@@ -102,7 +102,7 @@ function mapLoad(){
     var latLng = [41.789649, -87.599702];
   
     var mbAttr = 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
-    'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>';
     mbUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
   
     var grayscale   = L.tileLayer(mbUrl, {id: 'mapbox/light-v9', tileSize: 512, zoomOffset: -1, attribution: mbAttr}),
@@ -142,7 +142,7 @@ function mapLoad(){
     document.getElementById("apis").classList.toggle("show");
   }
 
-  // Close the dropdown menu if the user clicks outside of it
+// Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
       var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -155,3 +155,53 @@ window.onclick = function(event) {
       }
     }
   }
+
+var parentElement = document.getElementById('ochreTableBody');
+var url = "https://ochre.lib.uchicago.edu/ochre?uuid=accd571b-bae3-4d42-93d9-58b65ec79300";
+
+function loadXML(){
+    XMLrequest(url);
+    console.log('XML -- ok');
+}
+
+function XMLrequest(link){
+    var connect = new XMLHttpRequest();
+    connect.onreadystatechange = function (){
+        if (this.readyState == 4 && this.status == 200) {
+            listTexts(this.responseXML);
+        };
+    };
+    connect.open('GET', link, true);
+    connect.send();
+    console.log('XML request -- ok');
+}
+
+
+function listTexts(sourceXML){
+    document.getElementById('projectTitle').innerText = sourceXML.getElementsByTagName('metadata')[0].children[1].innerHTML;
+    document.getElementById('setTitle').innerText = sourceXML.getElementsByTagName('set')[0].children[3].children[0].innerHTML;
+    document.getElementById('setDescription').innerText = sourceXML.getElementsByTagName('set')[0].children[4].innerHTML;
+    var licenseText = document.getElementById('license');
+    licenseText.innerText = sourceXML.getElementsByTagName('availability')[0].children[0].innerHTML;
+    licenseText.setAttribute('href', sourceXML.getElementsByTagName('availability')[0].children[0].attributes[0].nodeValue);
+
+
+    console.log("sourceXML");
+    var textList = sourceXML.getElementsByTagName('text');
+    for (i=0; i<textList.length; i++) {
+        var tr = document.createElement('tr');
+        tr.setAttribute('class', 'ochreTableRows');
+        tr.setAttribute('id', 'row_' + i);
+        document.getElementById('ochreTableBody').appendChild(tr);
+
+        var td = document.createElement('td');
+        td.setAttribute('id', 'td_name_'+i);
+        td.textContent = textList[i].children[0].children[0].innerHTML;
+        document.getElementById('row_' + i).appendChild(td);
+        var td2 = document.createElement('td');
+        td2.setAttribute('id', 'td_desc_'+i);
+        td2.textContent = textList[i].children[3].innerHTML;
+        document.getElementById('row_'+i).appendChild(td2);
+    };
+
+}
