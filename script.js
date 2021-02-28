@@ -155,7 +155,7 @@ window.onclick = function(event) {
       }
     }
   }
-
+// Following along the videos on Canvas
 var parentElement = document.getElementById('ochreTableBody');
 var url = "https://ochre.lib.uchicago.edu/ochre?uuid=accd571b-bae3-4d42-93d9-58b65ec79300";
 
@@ -186,7 +186,7 @@ function listTexts(sourceXML){
     licenseText.setAttribute('href', sourceXML.getElementsByTagName('availability')[0].children[0].attributes[0].nodeValue);
 
 
-    console.log("sourceXML");
+    console.log(sourceXML);
     var textList = sourceXML.getElementsByTagName('text');
     for (i=0; i<textList.length; i++) {
         var tr = document.createElement('tr');
