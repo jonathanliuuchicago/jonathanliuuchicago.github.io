@@ -206,3 +206,9 @@ function listTexts(sourceXML){
     };
 
 }
+
+sentence = "Hello world";
+
+function testFunction(num){
+    console.log(num+5);
+}
